@@ -24,7 +24,7 @@
 #' a01 <- 0.2
 #' a11 <-  0.5
 #' l <- 1
-#' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
+#' sinar_pois(n_row, n_col, a10, a01, a11, l)
 sinar_pois <- function(n_row, n_col, a10, a01, a11, l) {
   n_row1  <-  n_row + 1e+2
   n_col1 <- n_col + 1e+2
@@ -128,7 +128,7 @@ cls <- function(X) {
 #' l <- 1
 #' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
 #'
-#' V <- emp_V(X)
+#' emp_V(X)
 emp_V <- function(X) {
 
   V <- matrix(0, 4, 4)
@@ -176,7 +176,7 @@ emp_V <- function(X) {
 #' l <- 1 # mean and variance for poison innovations
 #' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
 #'
-#' V <- teo_V(a10, a01, a11, l, sqrt(l))
+#' teo_V(a10, a01, a11, l, sqrt(l))
 teo_V <- function(a10, a01, a11, mu_e, s2_e) {
 
   # mean of X_{i,j}
@@ -225,7 +225,7 @@ teo_V <- function(a10, a01, a11, mu_e, s2_e) {
 #' l <- 1
 #' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
 #'
-#' W <- emp_V(X)
+#' emp_V(X)
 emp_W <- function(X) {
 
   theta <- cls(X) # estimates for a10, a01, a11 and mu
@@ -270,7 +270,7 @@ emp_W <- function(X) {
 #' l <- 1
 #' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
 #'
-#' W <- emp_V(X)
+#' var_sinar(X)
 var_sinar <- function(X) {
 
   theta <- cls(X) # estimates for a10, a01, a11 and mu
@@ -324,7 +324,7 @@ var_sinar <- function(X) {
 #' l <- 1
 #' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
 #'
-#' W <- emp_cov(X)
+#' emp_cov(X)
 emp_cov <- function(X) {
   cov <- MASS::ginv(emp_V(X)) %*% emp_W(X) %*% MASS::ginv(emp_V(X)) /
     ((nrow(X) - 1) * (ncol(X) - 1))
@@ -354,6 +354,8 @@ emp_cov <- function(X) {
 #' a11 <-  0.5
 #' l <- 1
 #' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
+#'
+#' var_hat_sigma(X)
 var_hat_sigma <- function(X) {
 
   m <- mean(X)
