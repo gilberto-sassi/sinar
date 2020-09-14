@@ -1,0 +1,23 @@
+Package: sinar
+Title: An implementation of Conditional Least Squared (CLS) method for the model SINAR(1,1)
+Version: 0.0.0.9000
+Authors@R: c(
+    person(given = "Gilberto P.",
+           family = "Sassi",
+           role = c("aut", "cre"),
+           email = "sassi.pereira.gilberto@gmail.com"), 
+	person(given = "Carolina C. M.",
+           family = "Paraíba",
+           role = c("aut"),
+           email = "ccmparaibao@gmail.com"))
+Description: This packages computes the CLS estimates and its covariance matrix.
+License: `use_gpl_license()`
+Imports:
+  MASS,
+  stats,
+  numDeriv
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+BugReports: https://github.com/gilberto-sassi/sinar/issues
