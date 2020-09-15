@@ -19,14 +19,6 @@ The estimated standard deviation in the \eqn{SINAR(1,1)}.
 }
 \examples{
 
-A simulated regular lattice with poison innovations.
-n_row <- 20
-n_col <- 50
-a10 <- 0.2
-a01 <- 0.2
-a11 <-  0.5
-l <- 1
-X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
-
-W <- emp_V(X)
+data("nematodes")
+var_sinar(nematodes)
 }

@@ -61,15 +61,8 @@ sinar_pois <- function(n_row, n_col, a10, a01, a11, l) {
 #'
 #' @examples
 #'
-#' A simulated regular lattice with poison innovations.
-#' #' n_row <- 20
-#' n_col <- 50
-#' a10 <- 0.2
-#' a01 <- 0.2
-#' a11 <-  0.5
-#' l <- 1
-#' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
-#' cls(X)
+#' data("nematodes")
+#' cls(nematodes)
 cls <- function(X) {
   n_row <- nrow(X)
   n_col <- ncol(X)
@@ -119,16 +112,8 @@ cls <- function(X) {
 #'
 #' @examples
 #'
-#' A simulated regular lattice with poison innovations.
-#' n_row <- 20
-#' n_col <- 50
-#' a10 <- 0.2
-#' a01 <- 0.2
-#' a11 <-  0.5
-#' l <- 1
-#' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
-#'
-#' emp_V(X)
+#' data("nematodes")
+#' emp_V(nematodes)
 emp_V <- function(X) {
 
   V <- matrix(0, 4, 4)
@@ -167,14 +152,12 @@ emp_V <- function(X) {
 #'
 #' @examples
 #'
-#' A simulated regular lattice with poison innovations.
 #' n_row <- 20
 #' n_col <- 50
 #' a10 <- 0.2
 #' a01 <- 0.2
 #' a11 <-  0.5
 #' l <- 1 # mean and variance for poison innovations
-#' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
 #'
 #' teo_V(a10, a01, a11, l, sqrt(l))
 teo_V <- function(a10, a01, a11, mu_e, s2_e) {
@@ -216,16 +199,8 @@ teo_V <- function(a10, a01, a11, mu_e, s2_e) {
 #'
 #' @examples
 #'
-#' A simulated regular lattice with poison innovations.
-#' n_row <- 20
-#' n_col <- 50
-#' a10 <- 0.2
-#' a01 <- 0.2
-#' a11 <-  0.5
-#' l <- 1
-#' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
-#'
-#' emp_V(X)
+#' data("nematodes")
+#' emp_V(nematodes)
 emp_W <- function(X) {
 
   theta <- cls(X) # estimates for a10, a01, a11 and mu
@@ -261,16 +236,8 @@ emp_W <- function(X) {
 #'
 #' @examples
 #'
-#' A simulated regular lattice with poison innovations.
-#' n_row <- 20
-#' n_col <- 50
-#' a10 <- 0.2
-#' a01 <- 0.2
-#' a11 <-  0.5
-#' l <- 1
-#' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
-#'
-#' var_sinar(X)
+#' data("nematodes")
+#' var_sinar(nematodes)
 var_sinar <- function(X) {
 
   theta <- cls(X) # estimates for a10, a01, a11 and mu
@@ -315,16 +282,8 @@ var_sinar <- function(X) {
 #'
 #' @examples
 #'
-#' A simulated regular lattice with poison innovations.
-#' n_row <- 20
-#' n_col <- 50
-#' a10 <- 0.2
-#' a01 <- 0.2
-#' a11 <-  0.5
-#' l <- 1
-#' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
-#'
-#' emp_cov(X)
+#' data("nematodes")
+#' emp_cov(nematodes)
 emp_cov <- function(X) {
   cov <- MASS::ginv(emp_V(X)) %*% emp_W(X) %*% MASS::ginv(emp_V(X)) /
     ((nrow(X) - 1) * (ncol(X) - 1))
@@ -346,16 +305,8 @@ emp_cov <- function(X) {
 #'
 #' @examples
 #'
-#' A simulated regular lattice with poison innovations.
-#' n_row <- 20
-#' n_col <- 50
-#' a10 <- 0.2
-#' a01 <- 0.2
-#' a11 <-  0.5
-#' l <- 1
-#' X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
-#'
-#' var_hat_sigma(X)
+#' data("nematodes")
+#' var_hat_sigma(nematodes)
 var_hat_sigma <- function(X) {
 
   m <- mean(X)

@@ -34,14 +34,12 @@ For more details, check Klimko and Nelson (1978).
 }
 \examples{
 
-A simulated regular lattice with poison innovations.
 n_row <- 20
 n_col <- 50
 a10 <- 0.2
 a01 <- 0.2
 a11 <-  0.5
 l <- 1 # mean and variance for poison innovations
-X <-  sinar_pois(n_row, n_col, a10, a01, a11, l)
 
-V <- teo_V(a10, a01, a11, l, sqrt(l))
+teo_V(a10, a01, a11, l, sqrt(l))
 }
