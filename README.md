@@ -6,7 +6,7 @@ This package implement the Conditional Least Square method for the model propose
 
 # Instalation
 
-In order to install this package, you can use the following commands:
+In order to install this package, you can use the following commands in `Rlang`:
 ```r
 if(!require("devtools")) {
   install.packages("devtools")
