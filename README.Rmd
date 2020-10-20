@@ -22,7 +22,7 @@ The goal of sinar is to implement the Conditional Least Square method for the Sp
 
 ## Installation
 
-And the development version from [GitHub](https://github.com/gilberto-sassi/) with:
+You can install the development version from [GitHub](https://github.com/gilberto-sassi/) with:
 
 ``` r
 # install.packages("devtools")

@@ -13,7 +13,7 @@ for the Spatial non-negative Integer-valued Autoregressive
 
 ## Installation
 
-And the development version from
+You can install the development version from
 [GitHub](https://github.com/gilberto-sassi/) with:
 
 ``` r
@@ -32,15 +32,15 @@ matrix_simulated <- sinar_pois(15, 15, 0.2, 0.2, 0.4, 5)
 ## Conditional Least Square (CLS) estimates
 cls(matrix_simulated)
 #>       a10       a01       a11        mu 
-#> 0.2658153 0.1906724 0.3980458 3.9129349
+#> 0.1605389 0.2860054 0.4277413 3.1261927
 
 ## Covariance matrix of CLS estimates
 emp_cov(matrix_simulated)
-#>               a10          a01           a11          mu
-#> a10  0.0034154179  0.000228933 -0.0009146087 -0.06524879
-#> a01  0.0002289330  0.003859600 -0.0016068704 -0.05990849
-#> a11 -0.0009146087 -0.001606870  0.0031029738 -0.01236036
-#> mu  -0.0652487913 -0.059908492 -0.0123603642  3.35664781
+#>               a10           a01          a11          mu
+#> a10  0.0044018403  0.0001991086 -0.001362643 -0.08051497
+#> a01  0.0001991086  0.0032884060 -0.000882474 -0.06218858
+#> a11 -0.0013626431 -0.0008824740  0.004125110 -0.04507648
+#> mu  -0.0805149667 -0.0621885767 -0.045076478  4.67716808
 ```
 
 ## Example: real dataset (nematodoes)
