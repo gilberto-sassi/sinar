@@ -1,0 +1,84 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# sinar
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of sinar is to implement the Conditional Least Square method for the Spatial non-negative Integer-valued Autoregressive $SINAR(1,1)$.
+
+## Installation
+
+And the development version from [GitHub](https://github.com/gilberto-sassi/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("gilberto-sassi/sinar")
+```
+## Example: simulated case
+
+```{r example}
+library(sinar)
+
+## Simulated data matrix from SINAR(1,1) with Poison(5) innovation
+matrix_simulated <- sinar_pois(15, 15, 0.2, 0.2, 0.4, 5)
+
+## Conditional Least Square (CLS) estimates
+cls(matrix_simulated)
+
+## Covariance matrix of CLS estimates
+emp_cov(matrix_simulated)
+
+## variance of innovations
+var_sinar(matrix_simulated)
+```
+
+## Example: real dataset (nematodoes)
+
+```{r}
+library(sinar)
+
+## Nematodes counting datasets
+data("nematodes")
+
+## Conditional Least Square (CLS) estimates
+cls(nematodes)
+
+## Covariance matrix of CLS estimates
+emp_cov(nematodes)
+
+## variance of innovations
+var_sinar(nematodes)
+```
+
+## Example: real dataset (carabidae)
+
+```{r}
+library(sinar)
+
+## Carabidae counting dataset
+data("carabidae")
+
+## Conditional Least Square (CLS) estimates
+cls(carabidae)
+
+## Covariance matrix of CLS estimates
+emp_cov(carabidae)
+
+## variance of innovations
+var_sinar(carabidae)
+```
+

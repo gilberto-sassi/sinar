@@ -17,7 +17,7 @@
 #' @param l Mean of the poison distribution used as innovations.
 #' @return A integer matrix.
 #'
-#' @example
+#' @examples
 #' n_row <- 20
 #' n_col <- 50
 #' a10 <- 0.2

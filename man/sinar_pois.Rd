@@ -33,3 +33,12 @@ This function simulates a regular lattice from the model
 where \eqn{\epsilon_{i,j}} is an iid process with poison distribution. Note
 the \eqn{a_{10}, a_{01}, a_{11}} must belong to the interval \eqn{[0,1]}.
 }
+\examples{
+n_row <- 20
+n_col <- 50
+a10 <- 0.2
+a01 <- 0.2
+a11 <-  0.5
+l <- 1
+sinar_pois(n_row, n_col, a10, a01, a11, l)
+}
