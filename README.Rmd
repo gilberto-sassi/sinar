@@ -42,8 +42,6 @@ cls(matrix_simulated)
 ## Covariance matrix of CLS estimates
 emp_cov(matrix_simulated)
 
-## variance of innovations
-var_sinar(matrix_simulated)
 ```
 
 ## Example: real dataset (nematodoes)
@@ -60,8 +58,6 @@ cls(nematodes)
 ## Covariance matrix of CLS estimates
 emp_cov(nematodes)
 
-## variance of innovations
-var_sinar(nematodes)
 ```
 
 ## Example: real dataset (carabidae)
@@ -78,7 +74,5 @@ cls(carabidae)
 ## Covariance matrix of CLS estimates
 emp_cov(carabidae)
 
-## variance of innovations
-var_sinar(carabidae)
 ```
 
