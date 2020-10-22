@@ -16,6 +16,7 @@
 #' @param a11 Coefficient from the element \eqn{X_{i-1, j-1}}.
 #' @param l Mean of the poison distribution used as innovations.
 #' @return A integer matrix.
+#' @export
 #'
 #' @examples
 #' n_row <- 20
@@ -58,6 +59,7 @@ sinar_pois <- function(n_row, n_col, a10, a01, a11, l) {
 #' @param X A integer matrix where each cell is the observed value in the
 #' regular lattice.
 #' @return a vector with the estimates of \eqn{a_{10}, a_{01}, a_{11}, \mu}.
+#' @export
 #'
 #' @examples
 #'
@@ -109,6 +111,7 @@ cls <- function(X) {
 #' @param X A integer matrix where each cell is the observed value in the
 #' regular lattice.
 #' @return The matrix V estimated empirically.
+#' @export
 #'
 #' @examples
 #'
@@ -149,6 +152,7 @@ emp_V <- function(X) {
 #' @param mu_e is the mean of the innovations \eqn{\epsilon_{i,j}}
 #' @param s2_e is the standar deviation of the innovations \eqn{\epsilon_{i,j}}
 #' @return The matrix V estimated empirically.
+#' @export
 #'
 #' @examples
 #'
@@ -196,6 +200,7 @@ teo_V <- function(a10, a01, a11, mu_e, s2_e) {
 #' @param X A integer matrix where each cell is the observed value in the
 #' regular lattice.
 #' @return The matrix \code{W} estimated empirically.
+#' @export
 #'
 #' @examples
 #'
@@ -233,6 +238,7 @@ emp_W <- function(X) {
 #' @param X A integer matrix where each cell is the observed value in the
 #' regular lattice.
 #' @return The estimated standard deviation in the \eqn{SINAR(1,1)}.
+#' @export
 #'
 #' @examples
 #'
@@ -279,6 +285,7 @@ var_sinar <- function(X) {
 #' @param X A integer matrix where each cell is the observed value in the
 #' regular lattice.
 #' @return The covariance matrix estimated empirically.
+#' @export
 #'
 #' @examples
 #'
@@ -302,6 +309,7 @@ emp_cov <- function(X) {
 #' regular lattice.
 #' @return The variance of standard deviation of the estimate of
 #' \eqn{\sigma_\epsilon}.
+#' @export
 #'
 #' @examples
 #'
