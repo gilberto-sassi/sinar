@@ -1,16 +1,19 @@
 Package: sinar
-Title: An Implementation of Conditional Least Squared (CLS) Method for the Model SINAR(1,1)
+Title: Conditional Least Squared (CLS) Method for the Model SINAR(1,1)
 Version: 0.1.0
 Authors@R: c(
     person(given = "Gilberto P.",
            family = "Sassi",
            role = c("aut", "cre"),
-           email = "sassi.pereira.gilberto@gmail.com"), 
-	person(given = "Carolina C. M.",
+           email = "sassi.pereira.gilberto@gmail.com"),
+    person(given = "Carolina C. M.",
            family = "Paraíba",
            role = c("aut"),
            email = "ccmparaibao@gmail.com"))
-Description: Implementation of the CLS estimates and its covariance matrix for the SINAR(1,1) model.
+Description: Implementation of the Conditional Least Square (CLS) estimates and
+    its covariance matrix for the first-order spatial integer-valued
+    autoregressive model (SINAR(1,1)) proposed by Ghodsi (2012)
+    <doi:10.1080/03610926.2011.560739>.
 License: MIT + file LICENSE
 Imports:
   MASS,
